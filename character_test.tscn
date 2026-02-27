@@ -791,7 +791,6 @@ _data = {
 size = Vector3(1, 1.72318, 1.06641)
 
 [node name="CharacterTest" type="CharacterBody3D"]
-motion_mode = 1
 script = ExtResource("1_cjnx4")
 
 [node name="character" parent="." instance=ExtResource("1_dvpr4")]
