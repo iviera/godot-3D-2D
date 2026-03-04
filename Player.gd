@@ -4,7 +4,7 @@ extends CharacterBody3D
 const SPEED = 8.0 
 const JUMP_VELOCITY = 5.0
 
-@onready var anim: AnimationPlayer = %AnimationPlayer
+@onready var anim: AnimationPlayer = %AnimationPlayer2
 
 func _physics_process(delta: float) -> void:
 	# Gravedad estándar
@@ -24,16 +24,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		
 		# Animación de correr
-		if anim.current_animation != "AnimPack1/FastRun":
-			anim.play("AnimPack1/FastRun")
+		if anim.current_animation != "AnimPack2/FastRun":
+			anim.play("AnimPack2/FastRun")
 		
 		# Rotación suave o instantánea
 		$character.rotation.y = PI/2 if direction > 0 else -PI/2
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		# Animación de Idle
-		if anim.current_animation != "AnimPack1/Idle":
-			anim.play("AnimPack1/Idle")
+		if anim.current_animation != "AnimPack2/Idle":
+			anim.play("AnimPack2/Idle")
 	
 	move_and_slide()
 	

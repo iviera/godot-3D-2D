@@ -1,37 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3ueopsqliyq0"]
+[gd_scene format=3 uid="uid://c3ueopsqliyq0"]
 
-[ext_resource type="PackedScene" uid="uid://coe2reci7umee" path="res://character_test.tscn" id="1_dvpr4"]
+[ext_resource type="PackedScene" uid="uid://cwevultnaulw3" path="res://character_test.tscn" id="1_dvpr4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wbfu4"]
 size = Vector3(12.2553, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xkndl"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1348670922]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=856235558]
 offset_right = 1152.0
 offset_bottom = 648.0
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1747582575]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="CharacterTest" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_dvpr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="CharacterTest" parent="SubViewportContainer/SubViewport" unique_id=1238075292 instance=ExtResource("1_dvpr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62119746, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=549747186]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewportContainer/SubViewport"]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewportContainer/SubViewport" unique_id=1901624921]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/StaticBody3D" unique_id=1443780668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87289, 0, 0)
 shape = SubResource("BoxShape3D_wbfu4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/StaticBody3D" unique_id=1915599407]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_xkndl")

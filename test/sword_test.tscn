@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://hguhrnsfa12x"]
-
-[ext_resource type="PackedScene" uid="uid://br1xec2t2hccp" path="res://test/sword.glb" id="1_wev2b"]
-
-[node name="SwordTest" type="Node3D" unique_id=85206430]
-
-[node name="sword" parent="." unique_id=1534035289 instance=ExtResource("1_wev2b")]
