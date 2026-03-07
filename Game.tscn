@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3ueopsqliyq0"]
 
 [ext_resource type="PackedScene" uid="uid://cwevultnaulw3" path="res://character_test.tscn" id="1_dvpr4"]
+[ext_resource type="PackedScene" uid="uid://c1g07uf365jj" path="res://Enemy/Skeleton/skeleton_godot.tscn" id="2_xkndl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wbfu4"]
 size = Vector3(12.2553, 1, 1)
@@ -27,11 +28,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62119746, 0)
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SubViewportContainer/SubViewport" unique_id=1901624921]
+transform = Transform3D(7.6865263, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/StaticBody3D" unique_id=1443780668]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87289, 0, 0)
+transform = Transform3D(5.733907, 0, 0, 0, 1, 0, 0, 0, 1, -1.87289, 0, 0)
 shape = SubResource("BoxShape3D_wbfu4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/StaticBody3D" unique_id=1915599407]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_xkndl")
+
+[node name="skeleton_godot" parent="SubViewportContainer/SubViewport" unique_id=983021724 instance=ExtResource("2_xkndl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.8108544, 0.6173085, 0)
