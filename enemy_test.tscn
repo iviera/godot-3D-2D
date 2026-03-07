@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d341fxenwxo6y"]
+
+[ext_resource type="Script" uid="uid://bb76ca3xr4lyj" path="res://Player.gd" id="1_5det1"]
+[ext_resource type="PackedScene" uid="uid://c1g07uf365jj" path="res://Enemy/Skeleton/skeleton_godot.tscn" id="2_c6iok"]
+[ext_resource type="AnimationLibrary" uid="uid://dixty7epwcher" path="res://Animations/AnimPack3.res" id="4_3cvfc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5gl7"]
+size = Vector3(1, 2.04688, 1)
+
+[node name="CharacterTest" type="CharacterBody3D" unique_id=1238075292]
+script = ExtResource("1_5det1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1746059788]
+transform = Transform3D(0.999994, -0.0035081, 0, 0.0035081, 0.999994, 0, 0, 0, 1, -0.000817073, 0.989256, 0)
+shape = SubResource("BoxShape3D_p5gl7")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=620913853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3937418, 6.5511856)
+
+[node name="skeleton_godot" parent="." unique_id=983021724 instance=ExtResource("2_c6iok")]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="skeleton_godot" unique_id=342504211]
+libraries/AnimPack3 = ExtResource("4_3cvfc")
